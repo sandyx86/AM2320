@@ -1,4 +1,4 @@
-//new_i2c.cpp
+//i2c.cpp
 #include "i2c.h"
 
 #include <linux/i2c.h>

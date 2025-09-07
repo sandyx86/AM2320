@@ -1,4 +1,4 @@
-//new_i2c.h
+//i2c.h
 
 #include <cstdlib>
 #include <cstdint>
