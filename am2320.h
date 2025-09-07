@@ -1,7 +1,7 @@
 #ifndef ADAFRUIT_AM2320
 #define ADAFRUIT_AM2320
 
-#include "new_i2c.h"
+#include "i2c.h"
 
 #define AM2320_SENSOR_VERSION 1
 #define AM2320_CMD_READREG 0x03

@@ -1,5 +1,5 @@
 //new_i2c.cpp
-#include "new_i2c.h"
+#include "i2c.h"
 
 #include <linux/i2c.h>
 #include <linux/i2c-dev.h>
