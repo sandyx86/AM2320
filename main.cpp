@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
 		auto now = std::chrono::system_clock::now();
 		auto now_time_t = std::chrono::system_clock::to_time_t(now);		
 
-		sensor.temperature(); //just to wake it up
+		sensor.temperature_C(); //just to wake it up
 		log << std::put_time(std::localtime(&now_time_t), "%Y-%m-%d %H:%M:%S"); 
 		log << ": " << sensor.temperature_F() << "F" << ";";
 		log << sensor.humidity() << "%" << std::endl;
