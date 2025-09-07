@@ -8,6 +8,11 @@
 #include <iomanip>
 
 int main(int argc, char *argv[]) {
+	if (argc > 2) {
+		std::cout << "need /dev/i2c-*" << std::endl;
+		exit(0);
+	}
+
 	Adafruit::AM2320 sensor(argv[1]);
 
 	while (true) {
@@ -18,7 +23,7 @@ int main(int argc, char *argv[]) {
 
 		sensor.temperature(); //just to wake it up
 		log << std::put_time(std::localtime(&now_time_t), "%Y-%m-%d %H:%M:%S"); 
-		log << ": " << sensor.temperature() << "C" << ";";
+		log << ": " << sensor.temperature_F() << "F" << ";";
 		log << sensor.humidity() << "%" << std::endl;
 
 		std::this_thread::sleep_for(std::chrono::minutes(1));

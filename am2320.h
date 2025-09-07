@@ -32,6 +32,7 @@ public:
 	AM2320(const char *path);
 	
 	float temperature();
+	float temperature_F();
 	float humidity();
 };
 

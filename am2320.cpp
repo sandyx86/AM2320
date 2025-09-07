@@ -52,8 +52,12 @@ AM2320::AM2320(const char *path) {
 	device = i2c::device(AM2320_I2C_PORT, path);
 }
 
-float AM2320::temperature() {
+float AM2320::temperature_C() {
 	return (read_register32( (uint8_t)Register::TEMP_H ) >> 16) / 10.0;
+}
+
+float AM2320::temperature_F() {
+	return (temperature() * 1.8f) + 32;
 }
 
 float AM2320::humidity() {
