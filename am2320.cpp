@@ -57,7 +57,7 @@ float AM2320::temperature_C() {
 }
 
 float AM2320::temperature_F() {
-	return (temperature() * 1.8f) + 32;
+	return (temperature_C() * 1.8f) + 32;
 }
 
 float AM2320::humidity() {
